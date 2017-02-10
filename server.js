@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }))
 
-
+require("./models/db");
 require('./routes')(app);
 
 app.listen(9000, function(){
