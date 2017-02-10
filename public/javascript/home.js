@@ -5,7 +5,7 @@ document.getElementById("submit").addEventListener("click", function(){
 		"email":email.value,
 		"password":password.value
 	}
-   post(object, function(object){
+   post(object, function(data){
    		console.log(data)
    })
 });
