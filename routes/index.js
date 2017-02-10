@@ -1,7 +1,11 @@
-module.exports = function (app) {
+var mongoose = require('mongoose');
 
-app.get("/", function(req, res){
-	res.send("hello world")
-})
+module.exports = function (app) {
+	app.get("/", function(req, res){
+		res.sendFile( process.cwd() + "/public/views/home.html")
+	})
+		app.get("/main", function(req, res){
+		res.sendFile( process.cwd() + "/public/views/home.html")
+	})
 
 }

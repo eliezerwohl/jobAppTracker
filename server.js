@@ -3,9 +3,9 @@ var express = require('express');
 
 var port =9000;
 var app = express();
+app.use(express.static( __dirname + '/public'));
 var logger= require('morgan');
 app.use(logger('dev'));
-app.use('/assets', express.static('assets'));
 
 
 require('./routes')(app);
