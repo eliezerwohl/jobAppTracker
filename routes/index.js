@@ -1,6 +1,9 @@
 var mongoose = require('mongoose');
 
 module.exports = function (app) {
+		app.get("/main", function(req, res){
+		res.sendFile( process.cwd() + "/public/views/main.html")
+	})
 	app.get("/", function(req, res){
 		res.sendFile( process.cwd() + "/public/views/home.html")
 	})
